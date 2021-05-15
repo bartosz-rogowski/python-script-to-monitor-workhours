@@ -27,4 +27,19 @@ That file has to contain 3 columns:
 - **Event** - event (*Reader entry* or *Reader exit*)
 - **Gate** - id of the door
 
-The results will be included in file *result* (unless user does not specify it).
+The results will be included in file *result* (unless user specifies it) and will contain information about:
+- amount of time spend in building in a day
+- literal:
+  - **w** if the day is a weekend
+  - **ot** if working time is grater than specified time (9 hours)
+  - **ut** if working time is less than specified time (6 hours)
+  - **i** if time is inconclusive
+- next to every last day of the week there will be summary of summaric time spent in the building and the overtime.
+
+## Additional information
+
+All constants are provided in *constants.py* so that they could be easily changeable.
+
+All necessary functions are icnluded in *lib.py*.
+
+The main script is *swi.py* 
